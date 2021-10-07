@@ -1,0 +1,50 @@
+.form-input {
+    text-align: left;
+    margin: 16px 0 0 10px;
+    user-select: none;
+}
+
+.form-input label {
+    font-weight: bold;
+    margin: 16px 0 0 0;
+}
+
+.form-input label:first-child {
+    font-weight: bold;
+    margin: 0 19px 0 0;
+}
+
+.form-input input {
+    border: none;
+    border-bottom: 1px solid rgb(158, 158, 158);
+    outline: none;
+    width: 32px;
+}
+
+.form-input input:last-child {
+    margin: 20px 0 12px 0;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 72px;
+    border-radius: 2px;
+}
+
+.form-input input:last-child:hover {
+    background-color: rgb(209, 209, 212);
+}
+
+.form-result {
+    text-align: left;
+    user-select: none;
+    margin: 0 0 0 10px;
+}
+
+.form-result p {
+    margin: 0 -4px 0 0;
+}
+
+.form-result label {
+    font-weight: bold;
+    color: blue;
+    margin: 0 0 0 16px;
+}

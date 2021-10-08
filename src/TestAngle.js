@@ -11,11 +11,13 @@ export default class TestAngle extends React.Component {
       AngleOfHourHand: "",
       AngleOfBetweenMHandH: "",
       resolveSucessCheck: false,
+      renderValidateCheck: false,
     };
   }
 
   handleValueChange = (event) => {
     this.setState({
+      renderValidateCheck: false,
       [event.target.name]: event.target.value,
     });
   };
@@ -92,6 +94,7 @@ export default class TestAngle extends React.Component {
         AngleOfMinuteHand: AngleMinuteHandTmp,
         AngleOfHourHand: AngleHourHandTmp,
         AngleOfBetweenMHandH: AngleBetweenMHandHTmp,
+        renderValidateCheck: true,
         resolveSucessCheck: true,
       });
     } else {
@@ -99,6 +102,7 @@ export default class TestAngle extends React.Component {
         AngleOfMinuteHand: AngleMinuteHandTmp,
         AngleOfHourHand: AngleHourHandTmp,
         AngleOfBetweenMHandH: AngleBetweenMHandHTmp,
+        renderValidateCheck: true,
         resolveSucessCheck: false,
       });
     }
@@ -129,7 +133,7 @@ export default class TestAngle extends React.Component {
         {this.inputValueOfMinuteHandandHourHand()}
         {this.state.resolveSucessCheck ? (
           this.renderAngleOfMinuteHandandHourHand()
-        ) : (
+        ) : this.state.renderValidateCheck ? (
           <small
             style={{
               textAlign: "left",
@@ -140,6 +144,8 @@ export default class TestAngle extends React.Component {
           >
             Vui lòng nhập đúng giá trị !!!!
           </small>
+        ) : (
+          <small></small>
         )}
       </div>
     );
